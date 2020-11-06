@@ -12,7 +12,7 @@ namespace CabInvoiceTest
         [Test]
         public void GivenDistanceAndTimeShouldReturnTotalFare()
         {
-            invoiceGenerator = new InvoiceGenerator(RideType.NORMAL);
+            invoiceGenerator = new InvoiceGenerator(RideType.PREMIUM);
             double distance = 2.0;
             int time = 5;
             double fare = invoiceGenerator.CalculateFare(distance, time);
@@ -22,7 +22,7 @@ namespace CabInvoiceTest
         [Test]
         public void GivenMultipleRideShouldReturnInvoiceSummary()
         {
-            invoiceGenerator = new InvoiceGenerator(RideType.NORMAL);
+            invoiceGenerator = new InvoiceGenerator(RideType.PREMIUM);
             Ride[] rides = { new Ride(2.0, 5), new Ride(0.1, 5) };
             InvoiceSummary summary = invoiceGenerator.CalculateFare(rides);
             InvoiceSummary expectedSummary = new InvoiceSummary(2, 30.0);
