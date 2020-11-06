@@ -7,7 +7,7 @@ namespace CabInvoice
     {
         private int numberOfRides;
         private double totalFare;
-        private double averageFare;
+        public double averageFare {get; set;}
         public InvoiceSummary(int numberOfRides, double totalFare)
         {
             this.numberOfRides = numberOfRides;
